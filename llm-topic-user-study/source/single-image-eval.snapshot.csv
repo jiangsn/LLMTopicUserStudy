@@ -1,0 +1,241 @@
+"image","filename","imageURL","VisType","NormalizedVC","llm_extra_topic","survey_question","","question_direction","selected_llm_evidence","human_topics_all","human_topics_when_more","llm_annotated_topics","human_topics_when_less","llm_explanation","human_comments"
+"","whoB32_1.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/whoB32_1.png","Bar","0.42","Data Density / Image Clutter","To what extent do you agree that the image feels visually crowded or cluttered?","","reducing","low-to-moderate data density; well-spaced bars","Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a straightforward grouped bar chart with two categories (lifetime prevalence and past 12 months) across 10 countries. The visual encoding is simple and immediately interpretable, with a clean two-color scheme and well-spaced bars. While there is moderate text density with rotated country labels and footnotes, the data density is low-to-moderate and the cognitive load is minimal for understanding the comparative patterns.","[more] it lacks contrast between the blue colours, a different colour would make the image less complex. there is more text on the image, which adds complexity.
+ [more] I don't understand the graphics well"
+"","whoB32_1.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/whoB32_1.png","Bar","0.42","Semantics / Text Legibility","To what extent do you agree that the text requires noticeable effort to read?","","increasing","rotated country labels; footnotes","Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a straightforward grouped bar chart with two categories (lifetime prevalence and past 12 months) across 10 countries. The visual encoding is simple and immediately interpretable, with a clean two-color scheme and well-spaced bars. While there is moderate text density with rotated country labels and footnotes, the data density is low-to-moderate and the cognitive load is minimal for understanding the comparative patterns.","[more] it lacks contrast between the blue colours, a different colour would make the image less complex. there is more text on the image, which adds complexity.
+ [more] I don't understand the graphics well"
+"","whoB32_1.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/whoB32_1.png","Bar","0.42","Visual Encoding Clarity","To what extent do you agree that the image's visual encoding is difficult to interpret?","","reducing","simple and immediately interpretable; grouped bar chart","Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a straightforward grouped bar chart with two categories (lifetime prevalence and past 12 months) across 10 countries. The visual encoding is simple and immediately interpretable, with a clean two-color scheme and well-spaced bars. While there is moderate text density with rotated country labels and footnotes, the data density is low-to-moderate and the cognitive load is minimal for understanding the comparative patterns.","[more] it lacks contrast between the blue colours, a different colour would make the image less complex. there is more text on the image, which adds complexity.
+ [more] I don't understand the graphics well"
+"","InfoVisJ.1161.5.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.1161.5.png","Point","0.48","Data Density / Image Clutter","To what extent do you agree that the image feels visually crowded or cluttered?","","increasing","significant overlap and clutter where the three categories converge","Color, Symbol, and Texture Details","","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details","Color, Symbol, and Texture Details","The scatter plot contains a moderate number of data points encoded with three distinct symbol types (diamonds, circles, triangles) in three colors (black, red, green), creating moderate encoding complexity. The upper-right region shows significant overlap and clutter where the three categories converge, increasing data density locally. However, the absence of axes labels, legends, titles, and gridlines reduces text and schema complexity, while the left portion of the plot is relatively sparse, balancing the overall visual load.","[less] The opposite one is just a collection of 3 different dots"
+"","InfoVisJ.1161.5.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.1161.5.png","Point","0.48","Schema","To what extent do you agree that the image has a complex or unfamiliar visual structure?","","reducing","scatter plot structure with little chart apparatus","Color, Symbol, and Texture Details","","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details","Color, Symbol, and Texture Details","The scatter plot contains a moderate number of data points encoded with three distinct symbol types (diamonds, circles, triangles) in three colors (black, red, green), creating moderate encoding complexity. The upper-right region shows significant overlap and clutter where the three categories converge, increasing data density locally. However, the absence of axes labels, legends, titles, and gridlines reduces text and schema complexity, while the left portion of the plot is relatively sparse, balancing the overall visual load.","[less] The opposite one is just a collection of 3 different dots"
+"","InfoVisJ.1161.5.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.1161.5.png","Point","0.48","Semantics / Text Legibility","To what extent do you agree that the text requires noticeable effort to read?","","reducing","absence of axes labels, legends, titles, and gridlines","Color, Symbol, and Texture Details","","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details","Color, Symbol, and Texture Details","The scatter plot contains a moderate number of data points encoded with three distinct symbol types (diamonds, circles, triangles) in three colors (black, red, green), creating moderate encoding complexity. The upper-right region shows significant overlap and clutter where the three categories converge, increasing data density locally. However, the absence of axes labels, legends, titles, and gridlines reduces text and schema complexity, while the left portion of the plot is relatively sparse, balancing the overall visual load.","[less] The opposite one is just a collection of 3 different dots"
+"","InfoVisJ.1161.5.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.1161.5.png","Point","0.48","Visual Encoding Clarity","To what extent do you agree that the image's visual encoding is difficult to interpret?","","increasing","three distinct symbol types; moderate encoding complexity","Color, Symbol, and Texture Details","","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details","Color, Symbol, and Texture Details","The scatter plot contains a moderate number of data points encoded with three distinct symbol types (diamonds, circles, triangles) in three colors (black, red, green), creating moderate encoding complexity. The upper-right region shows significant overlap and clutter where the three categories converge, increasing data density locally. However, the absence of axes labels, legends, titles, and gridlines reduces text and schema complexity, while the left portion of the plot is relatively sparse, balancing the overall visual load.","[less] The opposite one is just a collection of 3 different dots"
+"","VisJ.1499.2.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/VisJ.1499.2.png","Glyph","0.54","Color, Symbol, and Texture Details","To what extent do you agree that the image has complex color, symbol, or texture details?","","reducing","limited color palette","Aesthetics Uncertainty","","Data Density / Image Clutter
+Visual Encoding Clarity
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Aesthetics Uncertainty","The image shows three 3D wireframe mesh surfaces with red spherical markers at various grid intersections, requiring spatial reasoning to interpret. The data density is moderate-to-high with numerous red spheres and grid lines creating visual clutter, especially in the leftmost panel. The 3D schema and specialized domain context (likely medical/scientific surface modeling) add cognitive load, though the consistent visual encoding across panels and limited color palette (red, gray) keep complexity from being extreme.","[less] image on the right is more visually clean."
+"","VisJ.1499.2.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/VisJ.1499.2.png","Glyph","0.54","Data Density / Image Clutter","To what extent do you agree that the image feels visually crowded or cluttered?","","increasing","numerous red spheres and grid lines creating visual clutter","Aesthetics Uncertainty","","Data Density / Image Clutter
+Visual Encoding Clarity
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Aesthetics Uncertainty","The image shows three 3D wireframe mesh surfaces with red spherical markers at various grid intersections, requiring spatial reasoning to interpret. The data density is moderate-to-high with numerous red spheres and grid lines creating visual clutter, especially in the leftmost panel. The 3D schema and specialized domain context (likely medical/scientific surface modeling) add cognitive load, though the consistent visual encoding across panels and limited color palette (red, gray) keep complexity from being extreme.","[less] image on the right is more visually clean."
+"","VisJ.1499.2.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/VisJ.1499.2.png","Glyph","0.54","Immediacy / Cognitive Load","To what extent do you agree that the image requires substantial cognitive effort to interpret?","","increasing","requiring spatial reasoning; add cognitive load","Aesthetics Uncertainty","","Data Density / Image Clutter
+Visual Encoding Clarity
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Aesthetics Uncertainty","The image shows three 3D wireframe mesh surfaces with red spherical markers at various grid intersections, requiring spatial reasoning to interpret. The data density is moderate-to-high with numerous red spheres and grid lines creating visual clutter, especially in the leftmost panel. The 3D schema and specialized domain context (likely medical/scientific surface modeling) add cognitive load, though the consistent visual encoding across panels and limited color palette (red, gray) keep complexity from being extreme.","[less] image on the right is more visually clean."
+"","VisJ.1499.2.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/VisJ.1499.2.png","Glyph","0.54","Schema","To what extent do you agree that the image has a complex or unfamiliar visual structure?","","increasing","3D schema and specialized domain context","Aesthetics Uncertainty","","Data Density / Image Clutter
+Visual Encoding Clarity
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Aesthetics Uncertainty","The image shows three 3D wireframe mesh surfaces with red spherical markers at various grid intersections, requiring spatial reasoning to interpret. The data density is moderate-to-high with numerous red spheres and grid lines creating visual clutter, especially in the leftmost panel. The 3D schema and specialized domain context (likely medical/scientific surface modeling) add cognitive load, though the consistent visual encoding across panels and limited color palette (red, gray) keep complexity from being extreme.","[less] image on the right is more visually clean."
+"","VisJ.1499.2.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/VisJ.1499.2.png","Glyph","0.54","Visual Encoding Clarity","To what extent do you agree that the image's visual encoding is difficult to interpret?","","reducing","consistent visual encoding across panels","Aesthetics Uncertainty","","Data Density / Image Clutter
+Visual Encoding Clarity
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Aesthetics Uncertainty","The image shows three 3D wireframe mesh surfaces with red spherical markers at various grid intersections, requiring spatial reasoning to interpret. The data density is moderate-to-high with numerous red spheres and grid lines creating visual clutter, especially in the leftmost panel. The 3D schema and specialized domain context (likely medical/scientific surface modeling) add cognitive load, though the consistent visual encoding across panels and limited color palette (red, gray) keep complexity from being extreme.","[less] image on the right is more visually clean."
+"","economist_daily_chart_110.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/economist_daily_chart_110.png","Area","0.65","Immediacy / Cognitive Load","To what extent do you agree that the image requires substantial cognitive effort to interpret?","","reducing","cognitive load is low; quickly grasp the geographic pattern","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Schema","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Schema","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a choropleth world map with a single variable (ecological footprint) encoded across 7 color categories in a sequential red palette. The data density is moderate √¢‚Ç¨‚Äù many countries are shown but the encoding is straightforward and familiar. A few labeled callouts (Denmark, Kuwait, Qatar, UAE) add minor detail. The schema is simple (standard world map projection), the legend is clear, and cognitive load is low as readers can quickly grasp the geographic pattern without specialized knowledge.","[more] range of colours more physical content than the other image both text shapes and geography included red is a harsh colour compared to dark green"
+"","economist_daily_chart_110.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/economist_daily_chart_110.png","Area","0.65","Semantics / Text Legibility","To what extent do you agree that the text requires noticeable effort to read?","","reducing","legend is clear","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Schema","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Schema","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a choropleth world map with a single variable (ecological footprint) encoded across 7 color categories in a sequential red palette. The data density is moderate √¢‚Ç¨‚Äù many countries are shown but the encoding is straightforward and familiar. A few labeled callouts (Denmark, Kuwait, Qatar, UAE) add minor detail. The schema is simple (standard world map projection), the legend is clear, and cognitive load is low as readers can quickly grasp the geographic pattern without specialized knowledge.","[more] range of colours more physical content than the other image both text shapes and geography included red is a harsh colour compared to dark green"
+"","economist_daily_chart_110.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/economist_daily_chart_110.png","Area","0.65","Visual Encoding Clarity","To what extent do you agree that the image's visual encoding is difficult to interpret?","","reducing","encoding is straightforward","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Schema","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Schema","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a choropleth world map with a single variable (ecological footprint) encoded across 7 color categories in a sequential red palette. The data density is moderate √¢‚Ç¨‚Äù many countries are shown but the encoding is straightforward and familiar. A few labeled callouts (Denmark, Kuwait, Qatar, UAE) add minor detail. The schema is simple (standard world map projection), the legend is clear, and cognitive load is low as readers can quickly grasp the geographic pattern without specialized knowledge.","[more] range of colours more physical content than the other image both text shapes and geography included red is a harsh colour compared to dark green"
+"","SciVisJ.995.5.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/SciVisJ.995.5.png","Bar","0.22","Color, Symbol, and Texture Details","To what extent do you agree that the image has complex color, symbol, or texture details?","","reducing","single color bars","Immediacy / Cognitive Load
+Semantics / Text Legibility
+Visual Encoding Clarity","Immediacy / Cognitive Load
+Semantics / Text Legibility
+Visual Encoding Clarity","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a simple bar chart/histogram with 10 bins, minimal visual encoding (single color bars), clear axis labels, and direct value annotations on each bar. The layout is clean and uncluttered with low data density, a straightforward schema requiring no specialized knowledge, and very low cognitive load for interpretation.","[more] The image I chose shows what information the graph is presenting, and therefore provokes more thought and understanding. There are axes, numerical values.
+ [less] There are more bars on the graph There are more factors It is harder to read with the bars extending horizontally"
+"","SciVisJ.995.5.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/SciVisJ.995.5.png","Bar","0.22","Data Density / Image Clutter","To what extent do you agree that the image feels visually crowded or cluttered?","","reducing","low data density; clean and uncluttered","Immediacy / Cognitive Load
+Semantics / Text Legibility
+Visual Encoding Clarity","Immediacy / Cognitive Load
+Semantics / Text Legibility
+Visual Encoding Clarity","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a simple bar chart/histogram with 10 bins, minimal visual encoding (single color bars), clear axis labels, and direct value annotations on each bar. The layout is clean and uncluttered with low data density, a straightforward schema requiring no specialized knowledge, and very low cognitive load for interpretation.","[more] The image I chose shows what information the graph is presenting, and therefore provokes more thought and understanding. There are axes, numerical values.
+ [less] There are more bars on the graph There are more factors It is harder to read with the bars extending horizontally"
+"","SciVisJ.995.5.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/SciVisJ.995.5.png","Bar","0.22","Schema","To what extent do you agree that the image has a complex or unfamiliar visual structure?","","reducing","simple bar chart/histogram; straightforward schema","Immediacy / Cognitive Load
+Semantics / Text Legibility
+Visual Encoding Clarity","Immediacy / Cognitive Load
+Semantics / Text Legibility
+Visual Encoding Clarity","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a simple bar chart/histogram with 10 bins, minimal visual encoding (single color bars), clear axis labels, and direct value annotations on each bar. The layout is clean and uncluttered with low data density, a straightforward schema requiring no specialized knowledge, and very low cognitive load for interpretation.","[more] The image I chose shows what information the graph is presenting, and therefore provokes more thought and understanding. There are axes, numerical values.
+ [less] There are more bars on the graph There are more factors It is harder to read with the bars extending horizontally"
+"","SciVisJ.2664.2.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/SciVisJ.2664.2.png","Glyph","0.74","Data Density / Image Clutter","To what extent do you agree that the image feels visually crowded or cluttered?","","increasing","high data density; large overlapping arrows","Color, Symbol, and Texture Details
+Schema
+Visual Encoding Clarity","Color, Symbol, and Texture Details
+Schema
+Visual Encoding Clarity","Data Density / Image Clutter
+Visual Encoding Clarity
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a 3D vector field visualization with high data density, featuring hundreds of arrows varying in size, color, and direction. The central region is particularly cluttered with large overlapping arrows in multiple colors (dark red, yellow-green, orange, blue, green), while smaller arrows radiate outward creating significant visual clutter. The 3D schema with a coordinate axis indicator in the lower left requires specialized domain knowledge to interpret, and the overlapping elements in the center combined with the varied color encoding increase cognitive load substantially.","[more] Human interpretability Able to imagine a meaning Range of colours, presumably conveying meaning."
+"","SciVisJ.2664.2.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/SciVisJ.2664.2.png","Glyph","0.74","Immediacy / Cognitive Load","To what extent do you agree that the image requires substantial cognitive effort to interpret?","","increasing","increase cognitive load substantially","Color, Symbol, and Texture Details
+Schema
+Visual Encoding Clarity","Color, Symbol, and Texture Details
+Schema
+Visual Encoding Clarity","Data Density / Image Clutter
+Visual Encoding Clarity
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This is a 3D vector field visualization with high data density, featuring hundreds of arrows varying in size, color, and direction. The central region is particularly cluttered with large overlapping arrows in multiple colors (dark red, yellow-green, orange, blue, green), while smaller arrows radiate outward creating significant visual clutter. The 3D schema with a coordinate axis indicator in the lower left requires specialized domain knowledge to interpret, and the overlapping elements in the center combined with the varied color encoding increase cognitive load substantially.","[more] Human interpretability Able to imagine a meaning Range of colours, presumably conveying meaning."
+"","InfoVisJ.1149.8(2).png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.1149.8(2).png","Grid","0.76","Schema","To what extent do you agree that the image has a complex or unfamiliar visual structure?","","increasing","requires specialized domain knowledge","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Data Density / Image Clutter
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This visualization is extremely dense and cluttered, containing hundreds of small colored rectangles arranged in a grid pattern, each appearing to represent document pages or text fragments with color-coded overlays. The sheer volume of elements, the wide variety of colors (reds, blues, greens, cyans, purples, magentas), and the illegible tiny text within each cell create an overwhelming cognitive load. The color legend on the right side adds further complexity, and the schema requires specialized domain knowledge to interpret what the color encodings represent across this massive matrix.","[more] Immense amount of detail. Vast use of colorization. Virtually impossible to decipher to layman. Tiny layout of individual images.
+ [more] This image have more items in it. The image is too tiny, I can't describe what I can't see."
+"","InfoVisJ.1149.8(2).png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.1149.8(2).png","Grid","0.76","Semantics / Text Legibility","To what extent do you agree that the text requires noticeable effort to read?","","increasing","illegible tiny text; color legend","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Data Density / Image Clutter
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This visualization is extremely dense and cluttered, containing hundreds of small colored rectangles arranged in a grid pattern, each appearing to represent document pages or text fragments with color-coded overlays. The sheer volume of elements, the wide variety of colors (reds, blues, greens, cyans, purples, magentas), and the illegible tiny text within each cell create an overwhelming cognitive load. The color legend on the right side adds further complexity, and the schema requires specialized domain knowledge to interpret what the color encodings represent across this massive matrix.","[more] Immense amount of detail. Vast use of colorization. Virtually impossible to decipher to layman. Tiny layout of individual images.
+ [more] This image have more items in it. The image is too tiny, I can't describe what I can't see."
+"","InfoVisJ.2639.8.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.2639.8.png","Bar","0.71","Schema","To what extent do you agree that the image has a complex or unfamiliar visual structure?","","increasing","multi-panel design with mixed encodings","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This visualization combines three distinct panels: a color-coded strip chart (a), a detailed text table categorizing interactions (b), and a horizontal bar chart with percentages (c). The text density in the table is substantial with many detailed descriptions, and the color encoding uses multiple distinct colors across the strip and bars. However, the overall layout is relatively organized and the bar chart is straightforward to interpret, keeping cognitive load moderate. The multi-panel design with mixed encodings (table + chart + color strip) adds schema complexity.","[more] The color bar seems more complex and takes me longer to interpret."
+"","InfoVisJ.2639.8.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.2639.8.png","Bar","0.71","Semantics / Text Legibility","To what extent do you agree that the text requires noticeable effort to read?","","increasing","substantial text density; many detailed descriptions","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This visualization combines three distinct panels: a color-coded strip chart (a), a detailed text table categorizing interactions (b), and a horizontal bar chart with percentages (c). The text density in the table is substantial with many detailed descriptions, and the color encoding uses multiple distinct colors across the strip and bars. However, the overall layout is relatively organized and the bar chart is straightforward to interpret, keeping cognitive load moderate. The multi-panel design with mixed encodings (table + chart + color strip) adds schema complexity.","[more] The color bar seems more complex and takes me longer to interpret."
+"","InfoVisJ.2639.8.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/InfoVisJ.2639.8.png","Bar","0.71","Visual Encoding Clarity","To what extent do you agree that the image's visual encoding is difficult to interpret?","","reducing","bar chart is straightforward to interpret","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Immediacy / Cognitive Load","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","","This visualization combines three distinct panels: a color-coded strip chart (a), a detailed text table categorizing interactions (b), and a horizontal bar chart with percentages (c). The text density in the table is substantial with many detailed descriptions, and the color encoding uses multiple distinct colors across the strip and bars. However, the overall layout is relatively organized and the bar chart is straightforward to interpret, keeping cognitive load moderate. The multi-panel design with mixed encodings (table + chart + color strip) adds schema complexity.","[more] The color bar seems more complex and takes me longer to interpret."
+"","np_11.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/np_11.png","Node-link","0.65","Immediacy / Cognitive Load","To what extent do you agree that the image requires substantial cognitive effort to interpret?","","increasing","cognitive load is substantial","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Schema
+Semantics / Text Legibility
+Visual Encoding Clarity","Color, Symbol, and Texture Details
+Data Density / Image Clutter
+Semantics / Text Legibility
+Visual Encoding Clarity","Data Density / Image Clutter
+Visual Encoding Clarity
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Schema","This infographic displays high data density with numerous labeled nodes representing 50+ sports teams, each containing rank, value, and name information. The radial layout with color-coded categories (soccer, racing, basketball, baseball, football) creates moderate schema complexity, and the overlapping elements at the edges increase visual clutter. The cognitive load is substantial due to the sheer number of data points, varied node sizes, and the need to parse multiple text labels across the entire image, though the color grouping provides some organizational clarity.","[more] too many things
+ [more] Num of objects/words, how objects spread over the whole picture
+ [more] There is a lot of information to understand, there information is divided in more group, there are multiple area of interests
+ [more] Multiple elements, includes text and image, in different sizes, and different colours, lots of information
+ [less] The one to the right where I know they are talking about the total value of Forbes 50 most valuable sports team in 20112.
+ [less] Sports"
+"","MorphableWordClouds20.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/MorphableWordClouds20.png","Text","0.53","Color, Symbol, and Texture Details","To what extent do you agree that the image has complex color, symbol, or texture details?","","increasing","various sizes, orientations, and colors","Schema
+Semantics / Text Legibility","","Data Density / Image Clutter
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Schema
+Semantics / Text Legibility","This is a word cloud visualization with moderate complexity. The data density is moderate with numerous overlapping words at various sizes, orientations, and colors (red, brown, yellow, gray), creating some visual clutter. However, the schema is simple and immediately recognizable as a word cloud requiring minimal domain knowledge. The cognitive load is relatively low since word clouds are a familiar format, though the varied orientations and overlapping text require some effort to parse individual words.","[less] a word with weight graph"
+"","MorphableWordClouds20.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/MorphableWordClouds20.png","Text","0.53","Data Density / Image Clutter","To what extent do you agree that the image feels visually crowded or cluttered?","","increasing","numerous overlapping words; some visual clutter","Schema
+Semantics / Text Legibility","","Data Density / Image Clutter
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Schema
+Semantics / Text Legibility","This is a word cloud visualization with moderate complexity. The data density is moderate with numerous overlapping words at various sizes, orientations, and colors (red, brown, yellow, gray), creating some visual clutter. However, the schema is simple and immediately recognizable as a word cloud requiring minimal domain knowledge. The cognitive load is relatively low since word clouds are a familiar format, though the varied orientations and overlapping text require some effort to parse individual words.","[less] a word with weight graph"
+"","MorphableWordClouds20.png","https://raw.githubusercontent.com/c109363/ExperimentImage/main/AllDataResize/MorphableWordClouds20.png","Text","0.53","Immediacy / Cognitive Load","To what extent do you agree that the image requires substantial cognitive effort to interpret?","","increasing","some effort to parse individual words","Schema
+Semantics / Text Legibility","","Data Density / Image Clutter
+Semantics / Text Legibility
+Schema
+Color, Symbol, and Texture Details
+Immediacy / Cognitive Load","Schema
+Semantics / Text Legibility","This is a word cloud visualization with moderate complexity. The data density is moderate with numerous overlapping words at various sizes, orientations, and colors (red, brown, yellow, gray), creating some visual clutter. However, the schema is simple and immediately recognizable as a word cloud requiring minimal domain knowledge. The cognitive load is relatively low since word clouds are a familiar format, though the varied orientations and overlapping text require some effort to parse individual words.","[less] a word with weight graph"
+"","","","","","","""Cognitive load"" is hard to understand, need to replace with other words","","","","","","","","",""

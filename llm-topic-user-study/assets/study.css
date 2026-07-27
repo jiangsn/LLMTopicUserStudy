@@ -1,0 +1,20 @@
+:root {
+  --alignment-navy: #314154;
+  --alignment-ink: #1f2937;
+  --alignment-muted: #64748b;
+  --alignment-border: #d9e0e8;
+  --alignment-accent: #2563eb;
+}
+
+body {
+  color: var(--alignment-ink);
+  background: #f7f9fc;
+}
+
+.mantine-AppShell-main {
+  background: #f7f9fc;
+}
+
+.study-contact-info {
+  margin-left: 1.5rem;
+}

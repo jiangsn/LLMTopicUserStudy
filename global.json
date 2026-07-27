@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/GlobalConfigSchema.json",
+  "configsList": [
+    "llm-topic-alignment"
+  ],
+  "configs": {
+    "llm-topic-alignment": {
+      "path": "llm-topic-user-study/config.json"
+    }
+  }
+}

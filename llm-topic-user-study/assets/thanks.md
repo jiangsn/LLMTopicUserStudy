@@ -1,6 +1,12 @@
-# Thank you
+# Thank you for your participation!
 
-You have reached the end of the study. Thank you for your time and careful responses.
+We sincerely appreciate the time and care you contributed to this study. Your
+responses and overall-experience feedback have been recorded.
 
-This is a **local pilot**, so no Prolific completion redirect is enabled. Select
-**Finish** to let reVISit save the completion state.
+This public pilot does not yet use a Prolific completion redirect. If you opened the
+study from Prolific, please follow the completion instructions provided with that
+study listing. Otherwise, select **Finish** below to mark this session complete.
+
+If you have questions or additional comments, please contact Shuning Jiang
+([jiang.2126@osu.edu](mailto:jiang.2126@osu.edu)) or Prof. Jian Chen
+([chen.8028@osu.edu](mailto:chen.8028@osu.edu)).

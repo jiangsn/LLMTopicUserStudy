@@ -1,8 +1,9 @@
 # Visualization topic alignment study
 
 You are invited to take part in a research study about how people interpret data
-visualizations. You will view 10 visualization images and rate 29 statements, one
-statement at a time. The study should take approximately **8-10 minutes**.
+visualizations. You will view 10 visualization images and rate 29 statements, with
+all statements for one image shown together. The study should take approximately
+**8-10 minutes**.
 
 Participation is voluntary. You may stop at any time by closing the browser. Your
 responses will be associated with an anonymous study identifier (and, when applicable,

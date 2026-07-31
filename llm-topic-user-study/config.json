@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "LLM–Human Topic Alignment Study",
-    "version": "pilot-2026-07-29-image-matrix-v3",
+    "version": "pilot-2026-07-31-instruction-layout-v4",
     "authors": [
       "Shuning Jiang",
       "Jian Chen"
@@ -128,6 +128,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -136,7 +139,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/whoB32_1.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--whob32-1--data-density-image-clutter-01",
             "filename": "whoB32_1.png",
             "imageSlug": "whob32-1",
@@ -154,7 +157,7 @@
             "sourceRow": 2
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--whob32-1--semantics-text-legibility-02",
             "filename": "whoB32_1.png",
             "imageSlug": "whob32-1",
@@ -172,7 +175,7 @@
             "sourceRow": 3
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--whob32-1--visual-encoding-clarity-03",
             "filename": "whoB32_1.png",
             "imageSlug": "whob32-1",
@@ -205,6 +208,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -213,7 +219,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/InfoVisJ.1161.5.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-1161-5--data-density-image-clutter-04",
             "filename": "InfoVisJ.1161.5.png",
             "imageSlug": "infovisj-1161-5",
@@ -231,7 +237,7 @@
             "sourceRow": 5
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-1161-5--schema-05",
             "filename": "InfoVisJ.1161.5.png",
             "imageSlug": "infovisj-1161-5",
@@ -249,7 +255,7 @@
             "sourceRow": 6
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-1161-5--semantics-text-legibility-06",
             "filename": "InfoVisJ.1161.5.png",
             "imageSlug": "infovisj-1161-5",
@@ -267,7 +273,7 @@
             "sourceRow": 7
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-1161-5--visual-encoding-clarity-07",
             "filename": "InfoVisJ.1161.5.png",
             "imageSlug": "infovisj-1161-5",
@@ -300,6 +306,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -308,7 +317,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/VisJ.1499.2.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--visj-1499-2--color-symbol-and-texture-details-08",
             "filename": "VisJ.1499.2.png",
             "imageSlug": "visj-1499-2",
@@ -326,7 +335,7 @@
             "sourceRow": 9
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--visj-1499-2--data-density-image-clutter-09",
             "filename": "VisJ.1499.2.png",
             "imageSlug": "visj-1499-2",
@@ -344,7 +353,7 @@
             "sourceRow": 10
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--visj-1499-2--immediacy-cognitive-load-10",
             "filename": "VisJ.1499.2.png",
             "imageSlug": "visj-1499-2",
@@ -362,7 +371,7 @@
             "sourceRow": 11
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--visj-1499-2--schema-11",
             "filename": "VisJ.1499.2.png",
             "imageSlug": "visj-1499-2",
@@ -380,7 +389,7 @@
             "sourceRow": 12
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--visj-1499-2--visual-encoding-clarity-12",
             "filename": "VisJ.1499.2.png",
             "imageSlug": "visj-1499-2",
@@ -413,6 +422,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -421,7 +433,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/economist_daily_chart_110.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--economist-daily-chart-110--immediacy-cognitive-load-13",
             "filename": "economist_daily_chart_110.png",
             "imageSlug": "economist-daily-chart-110",
@@ -439,7 +451,7 @@
             "sourceRow": 14
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--economist-daily-chart-110--semantics-text-legibility-14",
             "filename": "economist_daily_chart_110.png",
             "imageSlug": "economist-daily-chart-110",
@@ -457,7 +469,7 @@
             "sourceRow": 15
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--economist-daily-chart-110--visual-encoding-clarity-15",
             "filename": "economist_daily_chart_110.png",
             "imageSlug": "economist-daily-chart-110",
@@ -490,6 +502,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -498,7 +513,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/SciVisJ.995.5.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--scivisj-995-5--color-symbol-and-texture-details-16",
             "filename": "SciVisJ.995.5.png",
             "imageSlug": "scivisj-995-5",
@@ -516,7 +531,7 @@
             "sourceRow": 17
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--scivisj-995-5--data-density-image-clutter-17",
             "filename": "SciVisJ.995.5.png",
             "imageSlug": "scivisj-995-5",
@@ -534,7 +549,7 @@
             "sourceRow": 18
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--scivisj-995-5--schema-18",
             "filename": "SciVisJ.995.5.png",
             "imageSlug": "scivisj-995-5",
@@ -567,6 +582,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -575,7 +593,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/SciVisJ.2664.2.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--scivisj-2664-2--data-density-image-clutter-19",
             "filename": "SciVisJ.2664.2.png",
             "imageSlug": "scivisj-2664-2",
@@ -593,7 +611,7 @@
             "sourceRow": 20
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--scivisj-2664-2--immediacy-cognitive-load-20",
             "filename": "SciVisJ.2664.2.png",
             "imageSlug": "scivisj-2664-2",
@@ -626,6 +644,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -634,7 +655,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/InfoVisJ.1149.8(2).png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-1149-8-2--schema-21",
             "filename": "InfoVisJ.1149.8(2).png",
             "imageSlug": "infovisj-1149-8-2",
@@ -652,7 +673,7 @@
             "sourceRow": 22
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-1149-8-2--semantics-text-legibility-22",
             "filename": "InfoVisJ.1149.8(2).png",
             "imageSlug": "infovisj-1149-8-2",
@@ -685,6 +706,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -693,7 +717,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/InfoVisJ.2639.8.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-2639-8--schema-23",
             "filename": "InfoVisJ.2639.8.png",
             "imageSlug": "infovisj-2639-8",
@@ -711,7 +735,7 @@
             "sourceRow": 24
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-2639-8--semantics-text-legibility-24",
             "filename": "InfoVisJ.2639.8.png",
             "imageSlug": "infovisj-2639-8",
@@ -729,7 +753,7 @@
             "sourceRow": 25
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--infovisj-2639-8--visual-encoding-clarity-25",
             "filename": "InfoVisJ.2639.8.png",
             "imageSlug": "infovisj-2639-8",
@@ -762,6 +786,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -770,7 +797,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/np_11.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--np-11--immediacy-cognitive-load-26",
             "filename": "np_11.png",
             "imageSlug": "np-11",
@@ -803,6 +830,9 @@
       "response": [],
       "previousButton": true,
       "previousButtonText": "Previous",
+      "meta": {
+        "hidePreviousWhenPreviousComponent": "instructions"
+      },
       "nextButtonText": "Next",
       "nextOnEnter": false,
       "parameters": {
@@ -811,7 +841,7 @@
         "imageUrl": "llm-topic-user-study/assets/images/MorphableWordClouds20.png",
         "questions": [
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--morphablewordclouds20--color-symbol-and-texture-details-27",
             "filename": "MorphableWordClouds20.png",
             "imageSlug": "morphablewordclouds20",
@@ -829,7 +859,7 @@
             "sourceRow": 28
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--morphablewordclouds20--data-density-image-clutter-28",
             "filename": "MorphableWordClouds20.png",
             "imageSlug": "morphablewordclouds20",
@@ -847,7 +877,7 @@
             "sourceRow": 29
           },
           {
-            "studyVersion": "pilot-2026-07-29-image-matrix-v3",
+            "studyVersion": "pilot-2026-07-31-instruction-layout-v4",
             "trialId": "trial--morphablewordclouds20--immediacy-cognitive-load-29",
             "filename": "MorphableWordClouds20.png",
             "imageSlug": "morphablewordclouds20",

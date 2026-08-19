@@ -1,0 +1,97 @@
+.demographics {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 12px 20px 8px;
+  color: #263244;
+}
+
+.demographics h1 {
+  margin: 0 0 6px;
+  color: #294b7a;
+  font-size: 1.65rem;
+}
+
+.demographics > p {
+  margin: 0 0 22px;
+}
+
+.demographics strong {
+  color: #2563a9;
+}
+
+.demographics__field {
+  display: grid;
+  gap: 7px;
+  margin: 0 0 18px;
+  font-size: 0.98rem;
+}
+
+.demographics__field input,
+.demographics__field select,
+.demographics__field textarea,
+.demographics__selfDescribe {
+  padding: 8px 10px;
+  color: #1f2937;
+  border: 1px solid #aebdce;
+  border-radius: 4px;
+  background: #fff;
+  font: inherit;
+}
+
+.demographics__field input {
+  width: min(440px, 100%);
+}
+
+.demographics__field textarea {
+  width: min(760px, 100%);
+  resize: vertical;
+}
+
+.demographics__compact {
+  grid-template-columns: minmax(280px, max-content) minmax(150px, 220px);
+  align-items: center;
+}
+
+.demographics__fieldset {
+  padding: 0;
+  margin: 0 0 18px;
+  border: 0;
+}
+
+.demographics__fieldset legend {
+  margin-bottom: 8px;
+}
+
+.demographics__choices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+
+.demographics__choices label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.demographics__choices input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563a9;
+}
+
+.demographics__selfDescribe {
+  width: 220px;
+}
+
+.demographics__selfDescribe:disabled {
+  background: #edf1f5;
+}
+
+@media (max-width: 760px) {
+  .demographics__compact {
+    grid-template-columns: 1fr;
+  }
+}

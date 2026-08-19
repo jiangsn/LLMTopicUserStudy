@@ -1,0 +1,32 @@
+.fixDisabled {
+  transition: none !important;
+
+  &:disabled, &[data-disabled] {
+    background-color: inherit !important;
+    opacity: 1 !important;
+
+    &:checked {
+      background-color: var(--radio-color) !important;
+    }
+
+    &:not(:checked) {
+      background-color: var(--input-bg) !important;
+    }
+  }
+}
+
+input:active + .fixDisabled {
+  border-color: var(--radio-color) !important;
+  background-color: var(--radio-color) !important;
+  transform: scale(0.94);
+}
+
+.fixDisabledIcon {
+  color: var(--mantine-color-white) !important;
+}
+
+.fixDisabledLabel {
+  &[data-disabled] {
+    color: var(--input-color) !important;
+  }
+}

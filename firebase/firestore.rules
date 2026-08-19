@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && 'email' in request.auth.token
+        && request.auth.token.email == 'jiang.sn.me@gmail.com';
+    }
+
+    function isSafeInitialModes() {
+      return request.resource.data.dataCollectionEnabled == true
+        && request.resource.data.developmentModeEnabled == false
+        && request.resource.data.dataSharingEnabled == false;
+    }
+
+    match /{studyId}/{documentId} {
+      allow get: if signedIn();
+      allow list: if isAdmin();
+      allow create: if signedIn()
+        && documentId in ['configHash', 'modes', 'sequenceAssignment']
+        && (documentId != 'modes' || isSafeInitialModes());
+      allow update, delete: if isAdmin();
+    }
+
+    // Latin-square balancing reads assignment metadata, but each anonymous account
+    // can create or update only its own assignment document.
+    match /{studyId}/sequenceAssignment/sequenceAssignment/{participantUid} {
+      allow get, list: if signedIn();
+      allow create: if signedIn()
+        && participantUid == request.auth.uid
+        && request.resource.data.participantId == request.auth.uid;
+      allow update: if signedIn()
+        && participantUid == request.auth.uid
+        && resource.data.participantId == request.auth.uid
+        && request.resource.data.participantId == request.auth.uid;
+      allow delete: if isAdmin();
+    }
+
+    match /user-management/{document=**} {
+      allow read, write: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

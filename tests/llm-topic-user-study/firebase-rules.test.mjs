@@ -12,6 +12,7 @@ import {
   doc,
   getDoc,
   getDocs,
+  runTransaction,
   setDoc,
   updateDoc,
 } from 'firebase/firestore';
@@ -30,6 +31,28 @@ let testEnvironment;
 
 const participantPath = (uid) => `${STUDY_ID}/participants/${uid}_participantData`;
 const provenancePath = (uid) => `${STUDY_ID}/provenance/${uid}_image-01`;
+
+const createPrivateAssignment = async (context, uid) => runTransaction(
+  context.firestore(),
+  async (transaction) => {
+    const counterRef = doc(context.firestore(), STUDY_ID, 'sequenceCounter');
+    const assignmentRef = doc(
+      context.firestore(),
+      STUDY_ID,
+      'sequenceAssignment',
+      'sequenceAssignment',
+      uid,
+    );
+    const counter = await transaction.get(counterRef);
+    const sequenceIndex = counter.exists() ? counter.data().nextIndex : 0;
+    transaction.set(counterRef, { nextIndex: sequenceIndex + 1 });
+    transaction.set(assignmentRef, {
+      participantId: uid,
+      sequenceIndex,
+      sequence: sequenceIndex,
+    });
+  },
+);
 
 before(async () => {
   testEnvironment = await initializeTestEnvironment({
@@ -119,16 +142,17 @@ test('shared Storage metadata is readable but cannot be overwritten by participa
   ));
 });
 
-test('participants can create and read only safe study modes', async () => {
+test('only the administrator can create or change study modes', async () => {
   const participant = testEnvironment.authenticatedContext('participant-a');
+  const admin = testEnvironment.authenticatedContext('admin-uid', { email: ADMIN_EMAIL });
   const modesRef = doc(participant.firestore(), STUDY_ID, 'modes');
 
   await assertFails(setDoc(modesRef, {
     dataCollectionEnabled: true,
     developmentModeEnabled: false,
-    dataSharingEnabled: true,
+    dataSharingEnabled: false,
   }));
-  await assertSucceeds(setDoc(modesRef, {
+  await assertSucceeds(setDoc(doc(admin.firestore(), STUDY_ID, 'modes'), {
     dataCollectionEnabled: true,
     developmentModeEnabled: false,
     dataSharingEnabled: false,
@@ -137,7 +161,7 @@ test('participants can create and read only safe study modes', async () => {
   await assertFails(updateDoc(modesRef, { dataSharingEnabled: true }));
 });
 
-test('Latin-square assignments are readable for balancing but writable only by their owner', async () => {
+test('Latin-square assignments are readable and writable only by their owner', async () => {
   const participantA = testEnvironment.authenticatedContext('participant-a');
   const participantB = testEnvironment.authenticatedContext('participant-b');
   const assignmentsA = collection(
@@ -148,15 +172,20 @@ test('Latin-square assignments are readable for balancing but writable only by t
   );
   const ownAssignmentA = doc(assignmentsA, 'participant-a');
 
-  await assertSucceeds(setDoc(ownAssignmentA, {
-    participantId: 'participant-a',
-    sequence: 0,
-  }));
-  await assertSucceeds(getDocs(collection(
+  await assertSucceeds(createPrivateAssignment(participantA, 'participant-a'));
+  await assertFails(getDocs(collection(
     participantB.firestore(),
     STUDY_ID,
     'sequenceAssignment',
     'sequenceAssignment',
+  )));
+  await assertSucceeds(getDoc(ownAssignmentA));
+  await assertFails(getDoc(doc(
+    participantB.firestore(),
+    STUDY_ID,
+    'sequenceAssignment',
+    'sequenceAssignment',
+    'participant-a',
   )));
   await assertFails(updateDoc(doc(
     participantB.firestore(),
@@ -174,22 +203,41 @@ test('Latin-square assignments are readable for balancing but writable only by t
   ), { participantId: 'forged-participant', sequence: 2 }));
 });
 
+test('concurrent participants receive unique counter indices and cannot advance twice', async () => {
+  const participantA = testEnvironment.authenticatedContext('participant-a');
+  const participantB = testEnvironment.authenticatedContext('participant-b');
+  const admin = testEnvironment.authenticatedContext('admin-uid', { email: ADMIN_EMAIL });
+
+  await Promise.all([
+    assertSucceeds(createPrivateAssignment(participantA, 'participant-a')),
+    assertSucceeds(createPrivateAssignment(participantB, 'participant-b')),
+  ]);
+
+  const assignments = await assertSucceeds(getDocs(collection(
+    admin.firestore(),
+    STUDY_ID,
+    'sequenceAssignment',
+    'sequenceAssignment',
+  )));
+  assert.deepEqual(
+    assignments.docs.map((snapshot) => snapshot.data().sequenceIndex).sort((a, b) => a - b),
+    [0, 1],
+  );
+  await assertFails(updateDoc(doc(participantA.firestore(), STUDY_ID, 'sequenceCounter'), {
+    nextIndex: 3,
+  }));
+});
+
 test('administrator can enumerate participant assignments and update study modes', async () => {
   const participant = testEnvironment.authenticatedContext('participant-a');
   const admin = testEnvironment.authenticatedContext('admin-uid', { email: ADMIN_EMAIL });
 
-  await setDoc(doc(participant.firestore(), STUDY_ID, 'modes'), {
+  await setDoc(doc(admin.firestore(), STUDY_ID, 'modes'), {
     dataCollectionEnabled: true,
     developmentModeEnabled: false,
     dataSharingEnabled: false,
   });
-  await setDoc(doc(
-    participant.firestore(),
-    STUDY_ID,
-    'sequenceAssignment',
-    'sequenceAssignment',
-    'participant-a',
-  ), { participantId: 'participant-a', sequence: 0 });
+  await createPrivateAssignment(participant, 'participant-a');
 
   await assertSucceeds(updateDoc(doc(admin.firestore(), STUDY_ID, 'modes'), {
     dataCollectionEnabled: false,

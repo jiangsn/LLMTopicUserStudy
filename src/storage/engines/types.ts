@@ -40,6 +40,7 @@ export type SequenceAssignment = {
   isDynamic: boolean; // Whether the study contains dynamic blocks
   stage: string; // The stage of the participant in the study
   conditions?: string[]; // The study condition(s) assigned to this participant.
+  sequenceIndex?: number; // Privacy-preserving cloud assignment index.
 };
 
 export type REVISIT_MODE = 'dataCollectionEnabled' | 'developmentModeEnabled' | 'dataSharingEnabled';
@@ -70,7 +71,7 @@ interface StageData {
   allStages: StageInfo[];
 }
 
-type ModesAndStageData = {
+export type ModesAndStageData = {
   modes: Record<REVISIT_MODE, boolean>;
   stageData: StageData;
 };
@@ -384,7 +385,7 @@ export abstract class StorageEngine {
     }
   }
 
-  private async getModesAndStageData(studyId: string): Promise<ModesAndStageData> {
+  protected async getModesAndStageData(studyId: string): Promise<ModesAndStageData> {
     const modesDoc = await this.getModes(studyId);
     const { stage, ...modeValues } = modesDoc;
 

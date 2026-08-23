@@ -25,6 +25,7 @@ import {
   getDocs,
   initializeFirestore,
   onSnapshot,
+  runTransaction,
   serverTimestamp,
   setDoc,
   updateDoc,
@@ -41,6 +42,7 @@ import {
   StorageObject,
   UserManagementData,
   SequenceAssignment,
+  ModesAndStageData,
   SnapshotDocContent,
   StoredUser,
   cleanupModes,
@@ -181,8 +183,15 @@ export class FirebaseStorageEngine extends CloudStorageEngine {
       'sequenceAssignment',
     );
 
-    const sequenceAssignments = await getDocs(sequenceAssignmentCollection);
-    return sequenceAssignments.docs
+    const auth = getAuth();
+    const isAdmin = auth.currentUser?.email === 'jiang.sn.me@gmail.com';
+    const snapshots = isAdmin
+      ? (await getDocs(sequenceAssignmentCollection)).docs
+      : auth.currentUser
+        ? [await getDoc(doc(sequenceAssignmentCollection, auth.currentUser.uid))].filter((snapshot) => snapshot.exists())
+        : [];
+
+    return snapshots
       .map((d) => d.data())
       .map((data) => ({
         ...data,
@@ -191,6 +200,82 @@ export class FirebaseStorageEngine extends CloudStorageEngine {
         completed: data.completed instanceof Timestamp ? data.completed.toMillis() : data.completed,
       } as SequenceAssignment))
       .sort((a, b) => a.timestamp - b.timestamp);
+  }
+
+  /**
+   * Assigns a Latin-square row without listing other participants. A Firestore
+   * transaction advances a non-identifying counter and creates only the current
+   * participant's assignment document, so concurrent sessions receive unique,
+   * stable indices while security rules keep assignment records private.
+   */
+  protected override async _getSequence(conditions?: string[], bootstrapData?: ModesAndStageData) {
+    if (!this.currentParticipantId || !this.studyId) {
+      throw new Error('Participant or study is not initialized');
+    }
+
+    const { modes, stageData } = bootstrapData ?? await this.getModesAndStageData(this.studyId);
+    const sequenceArray = await this.getSequenceArray();
+    if (!sequenceArray || sequenceArray.length === 0) {
+      throw new Error('Latin square not initialized');
+    }
+
+    const currentStage = stageData.currentStage.stageName;
+    const sequenceAssignmentDoc = doc(this.studyCollection, 'sequenceAssignment');
+    const assignmentRef = doc(
+      collection(sequenceAssignmentDoc, 'sequenceAssignment'),
+      this.currentParticipantId,
+    );
+    const counterRef = doc(this.studyCollection, 'sequenceCounter');
+
+    let sequenceIndex: number;
+    if (!modes.dataCollectionEnabled) {
+      sequenceIndex = Math.floor(Math.random() * sequenceArray.length);
+    } else {
+      sequenceIndex = await runTransaction(this.firestore, async (transaction) => {
+        const existingAssignment = await transaction.get(assignmentRef);
+        if (existingAssignment.exists()) {
+          const existingIndex = existingAssignment.data().sequenceIndex;
+          if (!Number.isInteger(existingIndex) || existingIndex < 0) {
+            throw new Error('Existing sequence assignment has no valid sequenceIndex');
+          }
+          return existingIndex as number;
+        }
+
+        const counterSnapshot = await transaction.get(counterRef);
+        const nextIndex = counterSnapshot.exists() ? counterSnapshot.data().nextIndex : 0;
+        if (!Number.isInteger(nextIndex) || nextIndex < 0) {
+          throw new Error('Sequence counter is invalid');
+        }
+
+        const assignment: SequenceAssignment = {
+          participantId: this.currentParticipantId!,
+          timestamp: new Date().getTime(),
+          rejected: false,
+          claimed: false,
+          completed: null,
+          createdTime: new Date().getTime(),
+          total: 0,
+          answered: [],
+          isDynamic: false,
+          stage: currentStage,
+          ...(conditions ? { conditions } : {}),
+          sequenceIndex: nextIndex,
+        };
+
+        transaction.set(counterRef, { nextIndex: nextIndex + 1 });
+        transaction.set(assignmentRef, {
+          ...assignment,
+          timestamp: serverTimestamp(),
+          createdTime: serverTimestamp(),
+        });
+        return nextIndex as number;
+      });
+    }
+
+    return {
+      currentRow: sequenceArray[sequenceIndex % sequenceArray.length],
+      creationIndex: sequenceIndex + 1,
+    };
   }
 
   // Set up realtime listener for sequence assignments

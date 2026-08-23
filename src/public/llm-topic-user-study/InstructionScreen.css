@@ -1,0 +1,196 @@
+.studyInstructions {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  color: #1f2937;
+}
+
+.studyInstructions h1 {
+  margin: 0 0 7px;
+  text-align: center;
+}
+
+.studyInstructions > p {
+  max-width: 960px;
+  margin: 0 auto 9px;
+  font-size: 0.9rem;
+  line-height: 1.42;
+}
+
+.studyInstructions__figure {
+  position: relative;
+  width: min(1080px, 96%);
+  aspect-ratio: 1366 / 768;
+  margin: 12px auto 10px;
+  background: #eef3f8;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 8px 28px rgb(15 23 42 / 10%);
+  overflow: hidden;
+}
+
+.studyInstructions__preview {
+  position: absolute;
+  inset: 4% 2.5% 4% 23%;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto auto;
+  color: #263244;
+  background: #fff;
+  border: 1px solid #c7d2df;
+}
+
+.instructionPreview__heading {
+  padding: 5px;
+  color: #526173;
+  text-align: center;
+  font-size: clamp(7px, 0.75vw, 11px);
+}
+
+.instructionPreview__image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 4px;
+}
+
+.instructionPreview__image img {
+  display: block;
+  max-width: 84%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.instructionPreview__lens {
+  position: absolute;
+  top: 20%;
+  right: 24%;
+  width: clamp(56px, 8vw, 112px);
+  height: clamp(56px, 8vw, 112px);
+  background-repeat: no-repeat;
+  background-position: 72% 35%;
+  background-size: 190% auto;
+  border: clamp(2px, 0.35vw, 5px) solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgb(15 23 42 / 38%);
+}
+
+.instructionPreview__prompt {
+  padding: 6px;
+  color: #e7eef6;
+  background: #314154;
+  border: clamp(2px, 0.35vw, 5px) solid #d9482b;
+  border-bottom: 0;
+  text-align: center;
+  font-size: clamp(7px, 0.7vw, 10px);
+}
+
+.instructionPreview__matrix {
+  display: grid;
+  grid-template-columns: 34% repeat(7, 1fr) 9%;
+  align-items: stretch;
+  border: clamp(2px, 0.35vw, 5px) solid #d9482b;
+  border-top: 0;
+  font-size: clamp(5px, 0.56vw, 8px);
+}
+
+.instructionPreview__matrix > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(18px, 3vw, 35px);
+  padding: 2px;
+  border-right: 1px solid #dfe6ed;
+  border-bottom: 1px solid #dfe6ed;
+  text-align: center;
+}
+
+.instructionPreview__header {
+  color: #415269;
+  background: #eef3f7;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.instructionPreview__statement {
+  justify-content: flex-start;
+  padding-left: 7px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.instructionPreview__radio::before {
+  width: clamp(5px, 0.75vw, 10px);
+  height: clamp(5px, 0.75vw, 10px);
+  border: 1px solid #8797aa;
+  border-radius: 50%;
+  content: "";
+}
+
+.instructionPreview__navigation {
+  display: flex;
+  justify-content: flex-end;
+  padding: 7px 10px;
+  color: #fff;
+  background: #f5f7fa;
+  font-size: clamp(6px, 0.7vw, 10px);
+}
+
+.instructionPreview__navigation span {
+  padding: 4px 9px;
+  border-radius: 3px;
+  background: #228be6;
+}
+
+.studyInstructions__callout {
+  position: absolute;
+  z-index: 2;
+  left: 1.5%;
+  width: 19%;
+  padding: 1.1% 1.2%;
+  color: #fff;
+  background: #b42318;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 28%);
+  font-size: clamp(8px, 1vw, 14px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.studyInstructions__callout--one { top: 9%; }
+.studyInstructions__callout--two { top: 43%; }
+.studyInstructions__callout--three { top: 78%; }
+
+.studyInstructions__annotations {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.callout__arrow {
+  fill: none;
+  stroke: #b42318;
+  stroke-width: 5;
+  marker-end: url("#instruction-arrow");
+}
+
+#instruction-arrow path {
+  fill: #b42318;
+}
+
+.studyInstructions__lead {
+  margin-top: 8px !important;
+  font-weight: 600;
+}
+
+.studyInstructions ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 30px;
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}

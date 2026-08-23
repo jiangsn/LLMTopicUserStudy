@@ -46,7 +46,7 @@ service firebase.storage {
 
     match /{studyId}/configs/{fileName} {
       allow get: if signedIn();
-      allow create: if signedIn()
+      allow create: if isAdmin()
         && resource == null
         && fileName.matches('^[A-Za-z0-9_-]+_config$')
         && isSmallJsonWrite();
@@ -55,7 +55,7 @@ service firebase.storage {
 
     match /{studyId}/{fileName} {
       allow get: if signedIn() && fileName == '_sequenceArray';
-      allow create: if signedIn()
+      allow create: if isAdmin()
         && resource == null
         && fileName == '_sequenceArray'
         && isSmallJsonWrite();

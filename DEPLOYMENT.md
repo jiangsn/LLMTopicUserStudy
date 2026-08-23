@@ -32,6 +32,12 @@ Before recruitment:
 5. Confirm modes are exactly: `dataCollectionEnabled=true`,
    `developmentModeEnabled=false`, and `dataSharingEnabled=false`.
 
+The production Firebase engine assigns Latin-square rows with an atomic
+`sequenceCounter` transaction. Participants can read only their own assignment;
+aggregate assignment reads are admin-only. Before participant staging, sign in as
+the administrator once to seed the production config, modes (including stage data),
+and shared sequence array in Storage.
+
 The production app uses the anonymous Firebase Auth UID as `participantId`.
 `PROLIFIC_PID`, `STUDY_ID`, and `SESSION_ID` are stored separately in answer data.
 

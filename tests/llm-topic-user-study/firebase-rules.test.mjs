@@ -119,12 +119,16 @@ test('administrator can inspect participant storage but anonymous users cannot e
   assert.equal(listing.items.length, 1);
 });
 
-test('shared Storage metadata is readable but cannot be overwritten by participants', async () => {
+test('shared Storage metadata is admin-created and read-only for participants', async () => {
   const participantA = testEnvironment.authenticatedContext('participant-a');
   const participantB = testEnvironment.authenticatedContext('participant-b');
-  const sequenceRefA = ref(participantA.storage(), `${STUDY_ID}/_sequenceArray`);
+  const admin = testEnvironment.authenticatedContext('admin-uid', { email: ADMIN_EMAIL });
+  const sequenceRef = ref(admin.storage(), `${STUDY_ID}/_sequenceArray`);
 
-  await assertSucceeds(uploadString(sequenceRefA, JSON.stringify([[0, 1]]), 'raw', {
+  await assertFails(uploadString(ref(participantA.storage(), `${STUDY_ID}/_sequenceArray`), JSON.stringify([[0, 1]]), 'raw', {
+    contentType: 'application/json',
+  }));
+  await assertSucceeds(uploadString(sequenceRef, JSON.stringify([[0, 1]]), 'raw', {
     contentType: 'application/json',
   }));
   await assertSucceeds(getMetadata(ref(participantB.storage(), `${STUDY_ID}/_sequenceArray`)));
@@ -140,6 +144,21 @@ test('shared Storage metadata is readable but cannot be overwritten by participa
     'raw',
     { contentType: 'application/json' },
   ));
+
+  const configPath = `${STUDY_ID}/configs/config-hash_config`;
+  await assertFails(uploadString(
+    ref(participantA.storage(), configPath),
+    JSON.stringify({ studyInfo: {} }),
+    'raw',
+    { contentType: 'application/json' },
+  ));
+  await assertSucceeds(uploadString(
+    ref(admin.storage(), configPath),
+    JSON.stringify({ studyInfo: {} }),
+    'raw',
+    { contentType: 'application/json' },
+  ));
+  await assertSucceeds(getMetadata(ref(participantB.storage(), configPath)));
 });
 
 test('only the administrator can create or change study modes', async () => {

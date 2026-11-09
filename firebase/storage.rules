@@ -1,0 +1,69 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && 'email' in request.auth.token
+        && request.auth.token.email == 'jiang.sn.me@gmail.com';
+    }
+
+    function ownsParticipantFile(fileName) {
+      return signedIn()
+        && fileName.matches('^' + request.auth.uid + '(_.*)?$');
+    }
+
+    function isSmallJsonWrite() {
+      return request.resource != null
+        && request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('application/json.*');
+    }
+
+    match /{studyId}/participants/{fileName} {
+      allow get: if ownsParticipantFile(fileName) || isAdmin();
+      allow create, update: if ownsParticipantFile(fileName) && isSmallJsonWrite();
+      allow delete, list: if isAdmin();
+    }
+
+    match /{studyId}/provenance/{fileName} {
+      allow get: if ownsParticipantFile(fileName) || isAdmin();
+      allow create, update: if ownsParticipantFile(fileName) && isSmallJsonWrite();
+      allow delete, list: if isAdmin();
+    }
+
+    // Audio and screen recording are disabled, but future approved versions remain
+    // isolated by Firebase UID.
+    match /{studyId}/{assetType}/{fileName} {
+      allow get: if assetType in ['audio', 'screenRecording']
+        && (ownsParticipantFile(fileName) || isAdmin());
+      allow create, update: if assetType in ['audio', 'screenRecording']
+        && ownsParticipantFile(fileName);
+      allow delete, list: if isAdmin();
+    }
+
+    match /{studyId}/configs/{fileName} {
+      allow get: if signedIn();
+      allow create: if isAdmin()
+        && resource == null
+        && fileName.matches('^[A-Za-z0-9_-]+_config$')
+        && isSmallJsonWrite();
+      allow update, delete, list: if isAdmin();
+    }
+
+    match /{studyId}/{fileName} {
+      allow get: if signedIn() && fileName == '_sequenceArray';
+      allow create: if isAdmin()
+        && resource == null
+        && fileName == '_sequenceArray'
+        && isSmallJsonWrite();
+      allow update, delete, list: if isAdmin();
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

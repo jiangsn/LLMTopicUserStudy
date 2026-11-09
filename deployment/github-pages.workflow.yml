@@ -1,0 +1,64 @@
+name: Deploy study to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      VITE_STORAGE_ENGINE: firebase
+      VITE_BASE_PATH: /${{ github.event.repository.name }}/
+      VITE_GITHUB_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+      VITE_LAUNCH_READY: "true"
+      VITE_REQUIRE_PROLIFIC_PARAMS: "true"
+      VITE_FIREBASE_CONFIG: ${{ secrets.VITE_FIREBASE_CONFIG }}
+      VITE_RECAPTCHAV3TOKEN: ${{ secrets.VITE_RECAPTCHAV3TOKEN }}
+      STUDY_CONTACT_EMAIL: ${{ secrets.STUDY_CONTACT_EMAIL }}
+      STUDY_CONSENT_APPROVED: ${{ secrets.STUDY_CONSENT_APPROVED }}
+      PROLIFIC_COMPLETION_URL: ${{ secrets.PROLIFIC_COMPLETION_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+      - run: corepack enable
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - run: yarn install --frozen-lockfile
+      - run: yarn data:validate
+      - run: yarn study:test
+      - run: yarn firebase:rules:test
+      - run: echo "FIREBASE_RULES_TESTED=true" >> "$GITHUB_ENV"
+      - run: yarn typecheck
+      - run: yarn build:production
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

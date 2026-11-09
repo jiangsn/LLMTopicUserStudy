@@ -1,0 +1,67 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && 'email' in request.auth.token
+        && request.auth.token.email == 'jiang.sn.me@gmail.com';
+    }
+
+    match /{studyId}/{documentId} {
+      allow get: if isAdmin()
+        || (signedIn() && documentId in ['configHash', 'modes']);
+      allow list: if isAdmin();
+      allow create, update, delete: if isAdmin();
+    }
+
+    // A shared counter contains no participant data. Transactions may advance it
+    // by exactly one only when they atomically create the caller's immutable
+    // sequence index.
+    match /{studyId}/sequenceCounter {
+      allow get: if signedIn();
+      allow list, delete: if isAdmin();
+      allow create: if signedIn()
+        && request.resource.data.keys().hasOnly(['nextIndex'])
+        && request.resource.data.nextIndex == 1
+        && getAfter(/databases/$(database)/documents/$(studyId)/sequenceAssignment/sequenceAssignment/$(request.auth.uid)).data.sequenceIndex == 0;
+      allow update: if signedIn()
+        && request.resource.data.keys().hasOnly(['nextIndex'])
+        && request.resource.data.nextIndex == resource.data.nextIndex + 1
+        && getAfter(/databases/$(database)/documents/$(studyId)/sequenceAssignment/sequenceAssignment/$(request.auth.uid)).data.sequenceIndex == resource.data.nextIndex;
+      allow create, update: if isAdmin();
+    }
+
+    // Anonymous participants can access only their own assignment document.
+    // Aggregate assignment reads are reserved for the administrator.
+    match /{studyId}/sequenceAssignment/sequenceAssignment/{participantUid} {
+      allow get: if signedIn() && participantUid == request.auth.uid;
+      allow list: if isAdmin();
+      allow create: if signedIn()
+        && participantUid == request.auth.uid
+        && request.resource.data.participantId == request.auth.uid
+        && request.resource.data.sequenceIndex is int
+        && request.resource.data.sequenceIndex >= 0
+        && getAfter(/databases/$(database)/documents/$(studyId)/sequenceCounter).data.nextIndex == request.resource.data.sequenceIndex + 1;
+      allow update: if signedIn()
+        && participantUid == request.auth.uid
+        && resource.data.participantId == request.auth.uid
+        && request.resource.data.participantId == request.auth.uid
+        && request.resource.data.sequenceIndex == resource.data.sequenceIndex
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['answered', 'completed', 'conditions', 'isDynamic', 'total']);
+      allow delete: if isAdmin();
+    }
+
+    match /user-management/{document=**} {
+      allow read, write: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

@@ -1,0 +1,16 @@
+participantId,trialId,trialOrder,responseId,answer,status,parameters_studyVersion,parameters_trialId,parameters_filename,parameters_imageUrl,parameters_visType,parameters_normalizedVC,parameters_llmExtraTopic,parameters_questionText,parameters_questionMode,parameters_questionDirection,parameters_selectedLlmEvidence
+p-001,demographics,1,ageBand,25–34,completed,,,,,,,,,,,
+p-001,demographics,1,gender,Prefer not to say,completed,,,,,,,,,,,
+p-001,demographics,1,countryRegion,Canada,completed,,,,,,,,,,,
+p-001,demographics,1,visualizationExperience,Weekly,completed,,,,,,,,,,,
+p-001,demographics,1,colorVision,No,completed,,,,,,,,,,,
+p-001,trial--image-a--topic-01,4,participantId,p-001,completed,local-pilot,trial--image-a--topic-01,image-a.png,llm-topic-user-study/assets/images/image-a.png,Bar,0.42,Schema,Test increasing question,generic,increasing,evidence A
+p-001,trial--image-a--topic-01,4,prolificPid,worker-7,completed,local-pilot,trial--image-a--topic-01,image-a.png,llm-topic-user-study/assets/images/image-a.png,Bar,0.42,Schema,Test increasing question,generic,increasing,evidence A
+p-001,trial--image-a--topic-01,4,rawRating,2,completed,local-pilot,trial--image-a--topic-01,image-a.png,llm-topic-user-study/assets/images/image-a.png,Bar,0.42,Schema,Test increasing question,generic,increasing,evidence A
+p-001,trial--image-a--topic-01,4,cannotJudge,false,completed,local-pilot,trial--image-a--topic-01,image-a.png,llm-topic-user-study/assets/images/image-a.png,Bar,0.42,Schema,Test increasing question,generic,increasing,evidence A
+p-001,trial--image-a--topic-01,4,imageOrder,1,completed,local-pilot,trial--image-a--topic-01,image-a.png,llm-topic-user-study/assets/images/image-a.png,Bar,0.42,Schema,Test increasing question,generic,increasing,evidence A
+p-001,trial--image-a--topic-01,4,questionOrder,1,completed,local-pilot,trial--image-a--topic-01,image-a.png,llm-topic-user-study/assets/images/image-a.png,Bar,0.42,Schema,Test increasing question,generic,increasing,evidence A
+p-001,trial--image-a--topic-01,4,responseTimeMs,1200,completed,local-pilot,trial--image-a--topic-01,image-a.png,llm-topic-user-study/assets/images/image-a.png,Bar,0.42,Schema,Test increasing question,generic,increasing,evidence A
+p-001,trial--image-b--topic-02,5,participantId,p-001,completed,local-pilot,trial--image-b--topic-02,image-b.png,llm-topic-user-study/assets/images/image-b.png,Point,0.65,Data Density / Image Clutter,Test reducing question,generic,reducing,evidence B
+p-001,trial--image-b--topic-02,5,rawRating,2,completed,local-pilot,trial--image-b--topic-02,image-b.png,llm-topic-user-study/assets/images/image-b.png,Point,0.65,Data Density / Image Clutter,Test reducing question,generic,reducing,evidence B
+p-001,trial--image-b--topic-02,5,cannotJudge,false,completed,local-pilot,trial--image-b--topic-02,image-b.png,llm-topic-user-study/assets/images/image-b.png,Point,0.65,Data Density / Image Clutter,Test reducing question,generic,reducing,evidence B
